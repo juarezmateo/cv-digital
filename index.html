@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="icon" type="image/x-icon" href="mj.ico">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mateo Juarez — Desarrollador Full Stack Junior | Técnico en Computacion</title>
+<meta name="description" content="Mateo Juarez, desarrollador Full Stack Junior y Técnico en Computacion en Buenos Aires, Argentina. Experiencia en React, JavaScript, Node.js, Python, MySQL y MongoDB. Disponible para nuevos proyectos.">
+<meta name="keywords" content="desarrollador full stack, desarrollador web junior, programador junior, técnico en Computacion, soporte técnico, help desk, React, React.js, JavaScript, TypeScript, Node.js, Python, MySQL, MongoDB, SQL, HTML, CSS, Git, GitHub, API REST, desarrollo backend, desarrollo frontend, desarrollo de software, Buenos Aires, Argentina, junior developer, software developer, web developer">
+<meta name="author" content="Mateo Juarez">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Mateo Juarez — Desarrollador Full Stack Junior">
+<meta property="og:description" content="Portafolio de Mateo Juarez: desarrollador Full Stack Junior y Técnico en Computacion React, Node.js, Python, MySQL, MongoDB.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mateo Juarez",
+  "jobTitle": "Desarrollador Full Stack Junior / Técnico en Computacion",
+  "email": "mailto:mateojuarezgiliberti@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Buenos Aires",
+    "addressCountry": "AR"
+  },
+  "sameAs": [
+    "https://github.com/juarezmateo",
+    "https://www.linkedin.com/in/mateo-juarez-giliberti-ba94372a5/"
+  ],
+  "knowsAbout": ["React", "JavaScript", "TypeScript", "Node.js", "Python", "MySQL", "MongoDB", "Git", "API REST", "Desarrollo Full Stack", "Soporte Técnico"]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0B0B0E;
+    --bg-soft:#131318;
+    --paper:#F2EFE8;
+    --signal:#FF4E1F;
+    --line:rgba(242,239,232,0.12);
+    --muted:#9C9890;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--paper);
+    font-family:'Inter',sans-serif;
+    line-height:1.5;
+    overflow-x:hidden;
+  }
+  img{max-width:100%;}
+  ::selection{background:var(--signal);color:var(--bg);}
+  a{color:inherit;text-decoration:none;}
+  .display{font-family:'Archivo',sans-serif;}
+  .mono{font-family:'JetBrains Mono',monospace;}
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    display:flex;justify-content:space-between;align-items:center;
+    padding:26px 6vw;
+    background:rgba(11,11,14,0.85);
+    backdrop-filter:blur(10px);
+  }
+  .logo{font-family:'Archivo',sans-serif;font-weight:900;font-size:1.05rem;letter-spacing:-.01em;}
+  .navlinks{display:flex;gap:36px;font-family:'JetBrains Mono',monospace;font-size:.78rem;text-transform:uppercase;letter-spacing:.04em;}
+  .navlinks a{opacity:.65;transition:opacity .2s;}
+  .navlinks a:hover{opacity:1;color:var(--signal);}
+  .nav-cta{
+    font-family:'JetBrains Mono',monospace;font-size:.78rem;font-weight:500;
+    background:var(--signal);color:var(--bg);
+    padding:10px 18px;border-radius:100px;
+    display:inline-flex;align-items:center;gap:8px;
+    box-shadow:0 0 0 0 rgba(255,78,31,.5);
+    animation:pulse-cta 2.4s infinite;
+    transition:transform .2s;
+  }
+  .nav-cta:hover{transform:translateY(-2px);}
+  @keyframes pulse-cta{
+    0%{box-shadow:0 0 0 0 rgba(255,78,31,.45);}
+    70%{box-shadow:0 0 0 9px rgba(255,78,31,0);}
+    100%{box-shadow:0 0 0 0 rgba(255,78,31,0);}
+  }
+  @media (max-width:768px){.navlinks{display:none;} .nav-cta{padding:9px 14px;font-size:.72rem;}}
+  @media (max-width:480px){
+    nav{padding:18px 5vw;}
+    .logo{font-size:.9rem;}
+    .nav-cta{padding:8px 12px;font-size:.68rem;gap:5px;}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    min-height:100vh;display:flex;align-items:center;
+    padding:80px 6vw 80px;gap:5vw;border-top:1px solid var(--line);
+  }
+  .hero-left{flex:1.15;}
+  .hero-tag{
+    display:inline-flex;align-items:center;gap:10px;
+    font-family:'JetBrains Mono',monospace;font-size:.78rem;
+    color:var(--signal);margin-bottom:26px;letter-spacing:.04em;
+  }
+  .hero-tag .dot{width:7px;height:7px;border-radius:50%;background:var(--signal);box-shadow:0 0 0 0 rgba(255,78,31,.6);animation:ping 2s infinite;}
+  @keyframes ping{0%{box-shadow:0 0 0 0 rgba(255,78,31,.5);}70%{box-shadow:0 0 0 8px rgba(255,78,31,0);}100%{box-shadow:0 0 0 0 rgba(255,78,31,0);}}
+
+  .hero h1{
+    font-family:'Archivo',sans-serif;font-weight:900;
+    font-size:clamp(2.6rem,6.2vw,5.2rem);
+    line-height:0.98;letter-spacing:-.02em;
+  }
+  .hero h1 .hl{color:var(--signal);}
+  .hero h1 .outline{color:transparent;-webkit-text-stroke:1.5px var(--paper);}
+
+  .hero p.lead{
+    margin-top:30px;font-size:1.15rem;color:var(--muted);max-width:520px;line-height:1.65;
+  }
+  .cta-row{display:flex;gap:16px;margin-top:46px;flex-wrap:wrap;}
+  .btn{
+    font-family:'JetBrains Mono',monospace;font-weight:500;font-size:.85rem;
+    padding:16px 28px;display:inline-flex;align-items:center;gap:10px;
+    transition:transform .2s, background .2s, color .2s;
+  }
+  .btn-fill{background:var(--signal);color:var(--bg);}
+  .btn-fill:hover{transform:translateY(-3px);}
+  .btn-line{border:1px solid var(--line);color:var(--paper);}
+  .btn-line:hover{border-color:var(--paper);transform:translateY(-3px);}
+
+  .stat-row{display:flex;gap:44px;margin-top:60px;flex-wrap:wrap;}
+  .stat .num{font-family:'Archivo',sans-serif;font-weight:900;font-size:1.9rem;color:var(--signal);}
+  .stat .lbl{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);text-transform:uppercase;margin-top:4px;}
+
+  /* ---------- TERMINAL (signature element) ---------- */
+  .terminal{
+    flex:1;background:var(--bg-soft);border:1px solid var(--line);
+    border-radius:10px;overflow:hidden;
+    box-shadow:0 40px 80px -30px rgba(0,0,0,0.6);
+    min-width:0;
+  }
+  .term-bar{
+    display:flex;align-items:center;gap:8px;
+    padding:14px 16px;border-bottom:1px solid var(--line);
+  }
+  .term-bar span{width:11px;height:11px;border-radius:50%;}
+  .term-bar span:nth-child(1){background:#FF5F57;}
+  .term-bar span:nth-child(2){background:#FEBC2E;}
+  .term-bar span:nth-child(3){background:#28C840;}
+  .term-bar .term-title{margin-left:10px;font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--muted);}
+  .term-body{
+    padding:26px 24px;font-family:'JetBrains Mono',monospace;font-size:.85rem;
+    min-height:280px;color:#D8D4C9;
+  }
+  .term-body .pr{color:var(--signal);}
+  .term-line{margin-bottom:10px;white-space:pre-wrap;}
+  .term-key{color:#8FB8FF;}
+  .term-str{color:#C8F076;}
+  .cursor{display:inline-block;width:8px;height:16px;background:var(--signal);vertical-align:middle;animation:blink 1s steps(1) infinite;}
+  @keyframes blink{50%{opacity:0;}}
+
+  @media (max-width:900px){
+    .hero{flex-direction:column;padding-top:120px;}
+    .terminal{width:100%;}
+  }
+  @media (max-width:480px){
+    .hero{padding:110px 5.5vw 60px;gap:44px;}
+    .hero p.lead{font-size:1.02rem;}
+    .cta-row{gap:12px;}
+    .btn{padding:14px 20px;font-size:.8rem;width:100%;justify-content:center;}
+    .cta-row .btn{flex:1 1 auto;}
+    .stat-row{gap:28px;margin-top:44px;}
+    .stat .num{font-size:1.5rem;}
+    .term-body{padding:20px 16px;font-size:.78rem;min-height:220px;}
+  }
+
+  /* ---------- SECTION SHELL ---------- */
+  section{padding:110px 6vw;}
+  @media (max-width:600px){section{padding:70px 6vw;}}
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--signal);
+    margin-bottom:16px;letter-spacing:.04em;
+  }
+  .section-title{
+    font-family:'Archivo',sans-serif;font-weight:900;
+    font-size:clamp(2rem,4vw,3.1rem);letter-spacing:-.01em;
+  }
+
+  /* ---------- ABOUT ---------- */
+  .about{padding-top:140px;}
+  @media (max-width:600px){.about{padding-top:100px;}}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5vw;margin-top:48px;align-items:start;}
+  @media (max-width:900px){.about-grid{grid-template-columns:1fr;}}
+  .about-text p{color:var(--muted);font-size:1.05rem;line-height:1.75;margin-bottom:20px;}
+  .about-text strong{color:var(--paper);font-weight:600;}
+
+  .intro-top{display:flex;gap:5vw;align-items:center;flex-wrap:wrap;}
+  .intro-photo-wrap{flex-shrink:0;}
+  .intro-text{flex:1;min-width:280px;}
+  @media (max-width:600px){
+    .intro-top{flex-direction:column;text-align:center;}
+    .intro-text{min-width:0;width:100%;}
+    .intro-text .cta-row{justify-content:center;}
+  }
+
+  .about-photo{
+    position:relative;width:280px;height:280px;
+    border-radius:18px;overflow:hidden;
+    border:2px solid var(--signal);
+    box-shadow:0 30px 60px -20px rgba(255,78,31,0.35), 0 0 0 6px rgba(255,78,31,0.08);
+    background:var(--bg-soft);
+  }
+  .about-photo::after{
+    content:'';position:absolute;inset:0;
+    border-radius:16px;pointer-events:none;
+    background:linear-gradient(135deg, rgba(255,78,31,0.12), transparent 50%);
+  }
+  .about-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+  .about-photo.no-photo img{display:none;}
+  .about-photo.no-photo::before{
+    content:'Foto próximamente';
+    position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    text-align:center;padding:20px;
+    font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);
+  }
+  .photo-badge{
+    margin-top:14px;display:flex;align-items:center;gap:8px;
+    font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--muted);
+  }
+  .photo-badge .dot{width:7px;height:7px;border-radius:50%;background:#28C840;box-shadow:0 0 0 0 rgba(40,200,64,.6);animation:ping 2s infinite;}
+  @media (max-width:560px){.about-photo{width:200px;height:200px;}}
+
+  .stack-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  @media (max-width:500px){.stack-grid{grid-template-columns:1fr;}}
+  .stack-card{
+    padding:22px;border:1px solid var(--line);border-radius:8px;
+    transition:border-color .2s, transform .2s;
+  }
+  .stack-card:hover{border-color:var(--signal);transform:translateY(-4px);}
+  .stack-card .sc-label{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--signal);text-transform:uppercase;margin-bottom:10px;}
+  .stack-card .sc-name{font-family:'Archivo',sans-serif;font-weight:700;font-size:1.05rem;margin-bottom:8px;}
+  .stack-card .sc-tools{font-size:.85rem;color:var(--muted);}
+
+  /* ---------- PROJECTS ---------- */
+  .projects{border-top:1px solid var(--line);}
+  .proj-grid{margin-top:48px;display:flex;flex-direction:column;}
+  .proj-row{
+    display:grid;grid-template-columns:60px 1fr auto;gap:28px;align-items:center;
+    padding:32px 0;border-bottom:1px solid var(--line);
+    transition:background .25s;
+  }
+  .proj-row:first-child{border-top:1px solid var(--line);}
+  .proj-row:hover{background:rgba(255,78,31,0.04);}
+  .proj-idx{font-family:'JetBrains Mono',monospace;color:var(--muted);font-size:.85rem;}
+  .proj-main .proj-title{font-family:'Archivo',sans-serif;font-weight:700;font-size:1.35rem;margin-bottom:8px;}
+  .proj-main .proj-desc{color:var(--muted);font-size:.95rem;max-width:560px;line-height:1.6;margin-bottom:12px;}
+  .proj-tags{display:flex;gap:8px;flex-wrap:wrap;}
+  .proj-tags span{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--paper);background:var(--bg-soft);border:1px solid var(--line);padding:5px 10px;border-radius:100px;}
+  .proj-arrow{
+    width:46px;height:46px;border-radius:50%;border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;font-size:1.1rem;
+    transition:background .25s,border-color .25s,transform .25s,color .25s;
+  }
+  .proj-row:hover .proj-arrow{background:var(--signal);border-color:var(--signal);color:var(--bg);transform:rotate(45deg);}
+  @media (max-width:700px){
+    .proj-row{grid-template-columns:1fr;gap:14px;}
+    .proj-idx{display:none;}
+  }
+
+  /* ---------- WHY ---------- */
+  .why{border-top:1px solid var(--line);}
+  .why-grid{margin-top:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  @media (max-width:900px){.why-grid{grid-template-columns:1fr;}}
+  .why-card{background:var(--bg);padding:34px;transition:background .25s;}
+  .why-card:hover{background:var(--bg-soft);}
+  .why-card .wn{font-family:'Archivo',sans-serif;font-weight:900;font-size:2rem;color:var(--signal);margin-bottom:18px;}
+  .why-card h3{font-family:'Archivo',sans-serif;font-weight:700;font-size:1.1rem;margin-bottom:10px;}
+  .why-card p{color:var(--muted);font-size:.9rem;line-height:1.6;}
+
+  /* ---------- CONTACT ---------- */
+  .contact{
+    border-top:1px solid var(--line);
+    text-align:center;
+  }
+  .contact h2{
+    font-family:'Archivo',sans-serif;font-weight:900;
+    font-size:clamp(2.2rem,5.5vw,4.4rem);line-height:1.02;letter-spacing:-.02em;
+  }
+  .contact h2 .hl{color:var(--signal);}
+  .contact p{margin-top:24px;color:var(--muted);font-size:1.05rem;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.7;}
+  .contact-email{
+    display:inline-block;margin-top:44px;
+    font-family:'Archivo',sans-serif;font-weight:700;font-size:1.6rem;
+    border-bottom:2px solid var(--signal);padding-bottom:8px;
+    transition:color .2s;
+  }
+  .contact-email:hover{color:var(--signal);}
+  .social-row{margin-top:34px;display:flex;justify-content:center;gap:28px;flex-wrap:wrap;font-family:'JetBrains Mono',monospace;font-size:.82rem;color:var(--muted);}
+  .social-row a:hover{color:var(--signal);}
+
+  footer{
+    padding:36px 6vw;border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
+    font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--muted);
+  }
+
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;}
+  .reveal.show{opacity:1;transform:translateY(0);}
+  @media (prefers-reduced-motion: reduce){*{animation:none !important;transition:none !important;}}
+
+  /* ---------- SCROLLBAR ---------- */
+  html{scrollbar-width:thin;scrollbar-color:var(--signal) var(--bg-soft);}
+  ::-webkit-scrollbar{width:11px;}
+  ::-webkit-scrollbar-track{background:var(--bg-soft);}
+  ::-webkit-scrollbar-thumb{
+    background:linear-gradient(180deg,#FF4E1F,#FF8A4E);
+    border-radius:100px;
+    border:2px solid var(--bg-soft);
+    background-clip:padding-box;
+  }
+  ::-webkit-scrollbar-thumb:hover{
+    background:linear-gradient(180deg,#FF6A3D,#FFAB6B);
+    background-clip:padding-box;
+  }
+
+  /* ---------- SCROLL PROGRESS BAR ---------- */
+  #scroll-progress{
+    position:fixed;top:0;left:0;height:3px;width:0%;z-index:100;
+    background:linear-gradient(90deg,#FF4E1F,#FFB347,#FF4E1F);
+    background-size:200% 100%;
+    animation:progress-shine 3s linear infinite;
+    box-shadow:0 0 12px 1px rgba(255,78,31,0.7);
+    transition:width .08s linear;
+  }
+  @keyframes progress-shine{
+    0%{background-position:0% 0;}
+    100%{background-position:200% 0;}
+  }
+  @media (prefers-reduced-motion: reduce){#scroll-progress{animation:none;}}
+</style>
+</head>
+<body>
+
+<div id="scroll-progress"></div>
+
+<nav>
+  <div class="logo">Mateo Juarez</div>
+  <div class="navlinks">
+    <a href="#about">Sobre mí</a>
+    <a href="#projects">Proyectos</a>
+    <a href="#why">Por qué yo</a>
+  </div>
+  <a href="#contact" class="nav-cta">✉ Contactame</a>
+</nav>
+
+<section class="about" id="about">
+  <div class="eyebrow">01 — SOBRE MÍ</div>
+  <div class="intro-top">
+    <div class="intro-photo-wrap">
+      <div class="about-photo">
+        <img src="foto-mateo.png" alt="Foto de Mateo Juarez"
+             onerror="this.onerror=null;this.parentElement.classList.add('no-photo');">
+      </div>
+      <div class="photo-badge"><span class="dot"></span>DISPONIBLE PARA NUEVOS PROYECTOS</div>
+    </div>
+    <div class="intro-text">
+      <h2 class="section-title">Mateo Juarez —<br>Desarrollador Full Stack Junior<br>y Técnico en Computacion.</h2>
+      <div class="cta-row" style="margin-top:30px;">
+        <a href="#contact" class="btn btn-fill">✉ Contactame ahora →</a>
+        <a href="CV_Mateo_Juarez.pdf" download="CV_Mateo_Juarez.pdf" class="btn btn-line">Descargar CV</a>
+      </div>
+    </div>
+  </div>
+  <div class="about-grid" style="margin-top:70px;">
+    <div class="about-text">
+      <p>Soy <strong>Mateo Juarez</strong>, desarrollador <strong>Full Stack Junior</strong> y <strong>Técnico en Computacion</strong> con base en Buenos Aires, Argentina. Trabajo en las tres capas de un producto —<strong>frontend, backend y base de datos</strong>— porque las mejores decisiones técnicas se toman entendiendo el problema entero, no solo el fragmento que a uno le toca resolver.</p>
+      <p>Tengo experiencia con <strong>React, JavaScript, TypeScript, Node.js, Python, MySQL y MongoDB</strong>, además de manejo de <strong>Git/GitHub, APIs REST</strong> y despliegue de aplicaciones en producción. También cuento con formación en <strong>soporte técnico </strong>, lo que me da una base sólida para resolver problemas de infraestructura y no solo de código.</p>
+      <p>Si tu equipo necesita un <strong>desarrollador web junior</strong> o <strong>programador</strong> que tome un problema completo y lo entregue resuelto —de punta a punta y con poca fricción entre equipos— esa persona soy yo.</p>
+    </div>
+    <div class="stack-grid-wrap">
+      <div class="stack-grid">
+        <div class="stack-card"><div class="sc-label">Frontend</div><div class="sc-name">Interfaz</div><div class="sc-tools">React, JavaScript, TypeScript, HTML, CSS</div></div>
+        <div class="stack-card"><div class="sc-label">Backend</div><div class="sc-name">Lógica</div><div class="sc-tools">Node.js, Python, APIs REST</div></div>
+        <div class="stack-card"><div class="sc-label">Datos</div><div class="sc-name">Persistencia</div><div class="sc-tools">MySQL, MongoDB, SQL</div></div>
+        <div class="stack-card"><div class="sc-label">Herramientas</div><div class="sc-name">Workflow</div><div class="sc-tools">Git, GitHub, Soporte Técnico</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="projects" id="projects">
+  <div class="eyebrow">02 — PROYECTOS</div>
+  <h2 class="section-title">Trabajo reciente</h2>
+  <div class="proj-grid">
+    <div class="proj-row">
+      <div class="proj-idx">01</div>
+      <div class="proj-main">
+        <div class="proj-title">Smart Home System- Sistema de casa inteligente</div>
+        <div class="proj-desc">Este es un proyecto escolar que consiste en automatizar tareas simples, e incluye un simulador.</div>
+        <div class="proj-tags"><span>React</span><span>Javascript</span></div>
+      </div>
+      <a href="https://juarezmateo.github.io/Pagina-Web-Cliente/" class="proj-arrow" target="_blank" rel="noopener noreferrer">↗</a>
+    </div>
+ <div class="proj-grid">
+    <div class="proj-row">
+	   <div class="proj-idx">02</div>
+      <div class="proj-main">
+        <div class="proj-title">SIC- Sistema de Informes de Conducta</div>
+        <div class="proj-desc">Este es un proyecto escolar que consiste en automatizar informes escolares en una escuela, Facilitando el almacenamiento de ellos</div>
+        <div class="proj-tags"><span>Javascript</span></div>
+      </div>
+      <a href="https://juarezmateo.github.io/Sistemas-de-Informes/" class="proj-arrow" target="_blank" rel="noopener noreferrer">↗</a>
+    </div>
+<div class="proj-grid">
+    <div class="proj-row">
+	   <div class="proj-idx">03</div>
+      <div class="proj-main">
+        <div class="proj-title">Anden - Sistema de Seguimiento nacional de envios </div>
+        <div class="proj-desc">Este es un proyecto que consiste en simular una app de un sistema nacional de envios</div>
+        <div class="proj-tags"><span>Javascript</span></div>
+      </div>
+      <a href="https://juarezmateo.github.io/Anden/" class="proj-arrow" target="_blank" rel="noopener noreferrer">↗</a>
+    </div>
+    
+</section>
+<section class="hero">
+  <div class="hero-left">
+    
+    <h1>Código que<br><span class="hl">resuelve</span><br><span class="outline">problemas</span><br>reales.</h1>
+    <p class="lead">Desarrollador y Técnico . Construyo productos completos con <strong style="color:var(--paper)">React, Node.js, Python y bases de datos SQL/NoSQL</strong> —interfaz, backend y persistencia— y los llevo a producción sin depender de nadie más para terminar el trabajo.</p>
+    <div class="cta-row">
+      <a href="#projects" class="btn btn-fill">Ver proyectos →</a>
+
+    </div>
+    <div class="stat-row">
+      <div class="stat"><div class="num">2+</div><div class="lbl">Años de experiencia</div></div>
+      <div class="stat"><div class="num">1+</div><div class="lbl">Proyectos entregados</div></div>
+      <div class="stat"><div class="num">24h</div><div class="lbl">Tiempo de respuesta</div></div>
+    </div>
+  </div>
+
+  <div class="terminal">
+    <div class="term-bar"><span></span><span></span><span></span><div class="term-title">~/console — zsh</div></div>
+    <div class="term-body" id="term-body"></div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="eyebrow">03 — POR QUÉ YO</div>
+  <h2 class="section-title">Lo que te ahorra contratarme</h2>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="wn">01</div>
+      <h3>Entregas predecibles</h3>
+      <p>Ciclos cortos, pruebo antes de desplegar y comunico avances reales, no estimaciones optimistas.</p>
+    </div>
+    <div class="why-card">
+      <div class="wn">02</div>
+      <h3>Visión completa del producto</h3>
+      <p>Hablo el idioma de negocio y el técnico, así que conecto directo con producto e infraestructura.</p>
+    </div>
+    <div class="why-card">
+      <div class="wn">03</div>
+      <h3>Código mantenible</h3>
+      <p>Escribo pensando en quien mantenga esto en seis meses, con pruebas y documentación clara.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="eyebrow">04 — CONTACTO</div>
+  <h2>¿Tu próximo proyecto<br>necesita <span class="hl">avanzar</span>?</h2>
+  <p>Contame qué estás construyendo. Te respondo en menos de 24 horas con una idea concreta de cómo puedo ayudar.</p>
+  <a href="mailto:mateojuarezgiliberti@gmail.com" class="contact-email">mateojuarezgiliberti@gmail.com</a>
+  <div class="social-row">
+    <a href="https://github.com/juarezmateo" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="https://www.linkedin.com/in/mateo-juarez-giliberti-ba94372a5/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="CV_Mateo_Juarez.pdf" download="CV_Mateo_Juarez.pdf">Descargar CV</a>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 @mateojuarez.g</span>
+  <span>Buenos Aires (CABA), Argentina</span>
+</footer>
+
+<script>
+  // animación de terminal escribiendo
+  const lines = [
+    { text: '$ whoami', cls: 'pr' },
+    { text: 'mateo — junior developer', cls: '' },
+    { text: '$ cat skills.json', cls: 'pr' },
+    { text: '{ "frontend": "React, TypeScript",', cls: '' },
+    { text: '  "backend": "Node.js, Python",', cls: '' },
+    { text: '  "database": "MySQL }', cls: '' },
+    { text: '$ ./deploy.sh production', cls: 'pr' },
+    { text: '✓ build completado en 12.4s', cls: '' },
+    { text: '✓ tests: 48/48 passed', cls: '' },
+    { text: '✓ desplegado en producción', cls: '' },
+  ];
+  const body = document.getElementById('term-body');
+  let li = 0, ci = 0;
+  function typeLine(){
+    if(li >= lines.length){
+      body.insertAdjacentHTML('beforeend', '<span class="term-line"><span class="cursor"></span></span>');
+      return;
+    }
+    const line = lines[li];
+    const lineEl = document.createElement('div');
+    lineEl.className = 'term-line' + (line.cls ? ' ' + line.cls : '');
+    body.appendChild(lineEl);
+    ci = 0;
+    function typeChar(){
+      if(ci <= line.text.length){
+        lineEl.textContent = line.text.slice(0, ci);
+        ci++;
+        setTimeout(typeChar, line.cls === 'pr' ? 38 : 14);
+      } else {
+        li++;
+        setTimeout(typeLine, 220);
+      }
+    }
+    typeChar();
+  }
+  // solo animar cuando el hero entra en vista, una vez
+  const heroObs = new IntersectionObserver((entries, obs) => {
+    entries.forEach(e => {
+      if(e.isIntersecting){ typeLine(); obs.disconnect(); }
+    });
+  }, { threshold: 0.3 });
+  heroObs.observe(document.querySelector('.terminal'));
+
+  // reveal al hacer scroll
+  document.querySelectorAll('section').forEach(s => s.classList.add('reveal'));
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+  // barra de progreso de scroll
+  const progressBar = document.getElementById('scroll-progress');
+  function updateProgress(){
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    progressBar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+</script>
+
+</body>
+</html>
+
